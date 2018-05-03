@@ -1,0 +1,31 @@
+navbar.site-navbar
+  @extend .shadow-one
+  display: flex
+  align-items: center
+  justify-content: space-between
+  background-color: $primary-color
+
+  .fa
+    color: white
+    font-size: 1.3rem
+    &.fa-phone
+      color: $site-yellow
+
+  .navbar-menu-list
+    display: flex
+    justify-content: space-around
+    align-items: center
+    color: white
+
+    .navbar-menu-item
+      @extend.quick-appear
+      &:hover
+        background-color: $primary-color-dark
+
+  .navbar-actions
+    background-color: $primary-litghed-color
+
+  .navbar-contact
+    background-color: $secondary-color
+    .phone
+      color: $site-yellow

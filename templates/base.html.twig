@@ -21,10 +21,8 @@
             {% block body %}{% endblock %}
 
             <!-- **********  Footer  ********** -->
-            <footer class="footer">
-                <div class="site-footer">
-                </div>
-            </footer>
+            {{ include('components/footer.html.twig') }}
+            
         </div>
         {% block javascripts %}{% endblock %}
     </body>
