@@ -2,11 +2,30 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
+    	<link href="{{ asset('build/css/app.css') }}" rel="stylesheet">
+
+        <!-- **********  Meta  ********** -->        
         <title>{% block title %}Welcome!{% endblock %}</title>
+
+        <!-- **********  Styles  ********** -->
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <div id="app" class="wraper container-fliud">
+
+            <!-- **********  Navbar  ********** -->
+            {{ include('components/navbar.html.twig') }}
+
+            <!-- **********  Body  ********** -->
+            {% block body %}{% endblock %}
+
+            <!-- **********  Footer  ********** -->
+            <footer class="footer">
+                <div class="site-footer">
+                </div>
+            </footer>
+        </div>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
