@@ -3,36 +3,79 @@
 {% block body %}
 
     <!-- ************  Main Title  ************ -->
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="site-title-container">
-                <h1 class="site-title">
-                    <span class="ponlo">Ponlo</span>
-                    <span class="bonito">Bonito</span>
-                    <span class="dot">.</span>
-                    <span class="com">com</span>
-                </h1>
-                <h2 class="site-slogan">Algunos buscan un mundo más bonito... otros lo crean.</h2>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="site-title-container">
+                    <h1 class="site-title">
+                        <span class="ponlo">Ponlo</span>
+                        <span class="bonito">Bonito</span>
+                        <span class="dot">.</span>
+                        <span class="com">com</span>
+                    </h1>
+                    <h2 class="site-slogan">Algunos buscan un mundo más bonito... otros lo crean.</h2>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- ************  Main Site Slider  ************ -->
-    <div class="row">
-        <div class="col-xs-12">
-            {{ include('components/slider.html.twig') }}
+    {# <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12"> #}
+                {{ include('components/slider.html.twig') }}
+            {# </div>
+        </div>
+    </div> #}
+
+    <!-- ************  Site Categories  ************ -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 categories-list">
+                <img src="/images/cushion-1.jpg">
+                <img src="/images/cushion-2.jpg">
+                <img src="/images/cushion-3.jpg">
+                <img src="/images/cushion-4.jpg">
+                <img src="/images/cushion-5.jpg">
+                <img src="/images/cushion-6.jpg" style="max-height: 250px; margin-bottom: 10%;">
+            </div>
         </div>
     </div>
 
-    <!-- ************  Site Categories  ************ -->
-    <div class="row">
-        <div class="col-xs-12 categories-list">
-            <img src="/images/cushion-1.jpg">
-            <img src="/images/cushion-2.jpg">
-            <img src="/images/cushion-3.jpg">
-            <img src="/images/cushion-4.jpg">
-            <img src="/images/cushion-5.jpg">
-            <img src="/images/cushion-6.jpg" style="max-height: 250px; margin-bottom: 10%;">
+    <!-- ************  Main Products  ************ -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="blue-light">Nuestros Clientes Compraron</h2>
+            </div>
+        </div>
+        <div class="row around-xs product-list">
+            {% for product in [1, 2, 3, 4] %}
+                {{ include('components/product-card.html.twig',  {'product': product}) }}
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- ************  Blog  ************ -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="site-title-container">
+                    <h1 class="site-title">
+                        <span class="ponlo">Ponlo</span>
+                        <span class="bonito">Bonito</span>
+                        <span class="dot">.</span>
+                        <span class="com">com/</span>
+                        <span class="bonito">blog</span>
+                    </h1>
+                    <h2 class="site-slogan">Algunos buscan un mundo más bonito... otros lo crean.</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row around-xs blog-list">
+            {% for card in [1, 2, 3, 4] %}
+                {{ include('components/blog-card.html.twig',  {'card': card}) }}
+            {% endfor %}
         </div>
     </div>
 {% endblock %}

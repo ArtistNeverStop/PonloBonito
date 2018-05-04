@@ -1,8 +1,53 @@
-button
+button, input, i
   cursor: pointer
-  padding: 13px
+  &:not(input)
+    padding: 13px
   @extend .shadow-hover
+
+button
+  i
+    padding: 0
+    box-shadow: none
+    &:hover
+      box-shadow: none
 
 button.sales
     background-color: $site-yellow
     color: $white
+
+.email-suscriber
+  @extend .column
+  & > div
+    display: flex
+  label
+    color: $secondary-color
+  input, button
+    border: 1px solid $secondary-color
+    border-radius: 6px
+  button
+    background-color: $secondary-color
+    color: white
+    border-top-left-radius: 0px
+    border-bottom-left-radius: 0px
+    padding: 4px
+    i
+      color: white
+  input
+    text-align: center
+    background-color: white
+    border-top-right-radius: 0px
+    border-bottom-right-radius: 0px
+
+button.back-to-top
+  @extend .shadow-hover
+  border-radius: 50%
+  height: 1rem
+  width: 1rem
+  background-color: $third-color
+  display: flex
+  align-items: center
+  justify-content: center
+  i
+    color: white
+    top: -8px;
+    position: relative

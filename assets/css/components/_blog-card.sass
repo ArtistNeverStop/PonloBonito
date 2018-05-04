@@ -1,0 +1,20 @@
+.blog-card
+  @extend .shadow-hover-two
+  cursor: pointer
+  padding: 15px
+  display: flex
+  flex-direction: column
+  border-bottom: 2px solid $secondary-color
+  img
+    object-fit: contain
+  .blog-card-title
+    color: $primary-color-light
+  .blog-card-share
+    i
+      color: $site-pink
+  .keep-reding
+    border: 1px solid $primary-color-light
+    padding: 10px
+    &:hover
+      color: white
+      background-color: $primary-color-light

@@ -1,0 +1,33 @@
+<div class="product-card-container col-xs-3">
+    <div class="product-card">
+        <img src="/images/product-{{ product }}.png">
+        <div class="product-card-content">
+            <p class="product-card-name">
+                {{
+                    [
+                        'Cojin sol 45 x 45 cm',
+                        'Edredón Lefko Jadquard, matrimonial, azul petróleo',
+                        'Cojin hexa rosa 45 x 45 cm',
+                        'Funda para cojín mongolian'
+                    ][(product-1)]
+                }}
+            </p>
+            <div class="product-card-prices flex around-xs">
+                <p class="product-card-price">
+                    ${{ random(500, 1430) }}
+                </p>
+                <p class="product-card-price-discount">
+                    ${{ random(255, 500) }}
+                </p>
+            </div>
+            <div class="product-card-rank center-xs">
+                <i class="fa fa-star able"></i>
+                <i class="fa fa-star able"></i>
+                <i class="fa fa-star able"></i>
+                <i class="fa fa-star able"></i>
+                <i class="fa fa-star able"></i>
+                <p>(5)</p>
+            </div>
+        </div>
+    </div>
+</div>

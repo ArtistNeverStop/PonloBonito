@@ -1,0 +1,37 @@
+.product-card
+  @extend .shadow-hover-two
+  cursor: pointer
+  padding: 15px
+  display: flex
+  flex-direction: column
+  border-bottom: 2px solid $secondary-color
+  img
+    object-fit: contain
+
+  i.fa-star
+    color: $secondary-color
+    padding: 2px
+    &.able
+      color: $site-yellow
+
+  .product-card-name
+    // color: $primary-color-light
+    padding: 5px 0
+    border-bottom: 1px solid $secondary-color
+
+  .product-card-price
+    text-decoration: line-through
+  .product-card-price-discount
+      color: $discount-red
+      text-decoration: none
+
+  .blog-card-share
+    i
+      color: $site-pink
+
+  .keep-reding
+    border: 1px solid $primary-color-light
+    padding: 10px
+    &:hover
+      color: white
+      background-color: $primary-color-light
