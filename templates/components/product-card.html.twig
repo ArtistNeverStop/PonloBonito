@@ -1,6 +1,13 @@
 <div class="product-card-container col-xs-3">
     <div class="product-card">
-        <img src="/images/product-{{ product }}.png">
+        <div class="product-card-image-container">
+            <div class="product-card-image-hover">
+                <button class="show-more">
+                    Ver mas
+                </button>
+            </div>
+            <img class="product-card-image" src="/images/product-{{ product }}.png">
+        </div>
         <div class="product-card-content">
             <p class="product-card-name">
                 {{

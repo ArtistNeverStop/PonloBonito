@@ -12,13 +12,18 @@
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
-        <div id="app" class="wraper">
+        <div id="app" class="wrapper">
 
             <!-- **********  Navbar  ********** -->
             {{ include('components/navbar.html.twig') }}
+            
+            <!-- **********  Site-Content  ********** -->
+            <div class="site-content">
 
-            <!-- **********  Body  ********** -->
-            {% block body %}{% endblock %}
+                <!-- **********  Body  ********** -->
+                {% block body %}{% endblock %}
+                    
+            </div>
 
             <!-- **********  Footer  ********** -->
             {{ include('components/footer.html.twig') }}

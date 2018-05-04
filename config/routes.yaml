@@ -1,3 +1,6 @@
 index:
     path: /
     controller: App\Controller\SiteController::index
+contact:
+    path: /contact
+    controller: App\Controller\SiteController::contact
